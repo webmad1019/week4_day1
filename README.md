@@ -8,5 +8,5 @@ Comienza un proyecto de NPM crenado package.json
 Instala las dependencias del archivo package.json presente en el directorio
 
 
-### npm install <module>
+### npm install _module_name_
 Instala el módulo indicado en el proyecto, referenciándolo en el archivo package.json
