@@ -1,7 +1,7 @@
 # Comandos NPM
 
 ### npm init
-Comienza un proyecto de NPM crenado package.json
+Comienza un proyecto de NPM creando package.json
 
 
 ### npm install
