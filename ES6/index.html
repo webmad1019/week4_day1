@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // object deconstructing
+        const person = {
+            name: 'Ger',
+            age: 22,
+            dog: 'Popino',
+            subscriptions: {
+                netflix: true,
+                hbo: true,
+                freeCodeCamp: true,
+                gym: false
+            }
+        }
+
+
+
+        const { name, age, dog, subscriptions } = person
+        console.log('Objeto destructurado!:', name, age, dog)
+        console.log('Objeto destructurado!:', subscriptions.gym)
+
+
+
+
+
+
+
+
+
+
+
+        // array deconstructing
+
+        const numbers = ["one", "two", "three", "four", "five"]
+        const [primero, segundo, , cuarto, quinto, sexto = 'no encontrado'] = numbers
+        console.log(primero, segundo, cuarto, quinto, sexto)
+
+
+
+
+
+
+
+
+
+
+
+        // array merging with spread operator
+
+        const reptiles = ["snake", "lizard", "alligator"]
+        const mammals = ["puppy", "kitten", "bunny"]
+
+        const animals = [...reptiles, 'Pez', ...mammals, 'Y otro animalico más']
+        console.log(animals)
+
+
+
+
+
+
+
+
+
+        // function's object arguments
+
+        function showMovieDetails() {
+            //console.log('lo que puedes hacer con arguments:', arguments) // => carece de .forEach()
+            //console.log('lo que puedes hacer con un array de verdad:', [])
+            console.log(arguments[0], 'fué dirigida por', arguments[1])
+            console.log('No puedo sacar la lista de actores porque "arguments" no dispone de forEach')
+        }
+        showMovieDetails('Titanic', 'James Cameron', 'Leo Dica', 'Kate Wins')
+
+
+
+
+
+
+
+
+
+        // REST parameters (parameters with spread operator)
+
+        function showMovieDetails2(title, director, ...actors) {
+            console.log(title, 'fué dirigida por', director)
+            console.log('Los actores son:')
+            actors.forEach(elm => console.log(elm))
+        }
+        showMovieDetails2('Titanic', 'James Cameron', 'Leo Dica', 'Kate Wins', 'El malo')
+
+
+
+
+
+
+
+
+
+
+        // default parameters
+
+        function sayName(name, surname = 'UNKNOWN') {
+            console.log(name, surname)
+        }
+
+        sayName('Germán', 'Alvarez')
+        sayName('Isa', 'Cuervas')
+        sayName('Sergio')
+
+
+    </script>
+</body>
+
+</html>
