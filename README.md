@@ -1,4 +1,4 @@
-# Comandos NPM:
+# Comandos NPM
 
 ### npm init
 Comienza un proyecto de NPM crenado package.json
